@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eD8-dG-8re">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eD8-dG-8re">
                                 <rect key="frame" x="147" y="388" width="120" height="120"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="width" constant="120" id="azt-vZ-x4V"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2s-Hc-Dbz">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2s-Hc-Dbz">
                                 <rect key="frame" x="147" y="244" width="120" height="120"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
@@ -32,7 +32,7 @@
                                     <constraint firstAttribute="width" constant="120" id="yRD-Wx-YGa"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fu0-lv-7hn">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fu0-lv-7hn">
                                 <rect key="frame" x="147" y="98" width="120" height="120"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
@@ -41,15 +41,18 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZ0-Kb-u1I">
-                                <rect key="frame" x="20" y="755" width="374" height="72"/>
+                                <rect key="frame" x="92.5" y="755" width="229" height="72"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="wgO-Xl-txv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="229" id="XHU-rM-qXL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="startButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="wVn-Zu-BBh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -67,6 +70,12 @@
                             <constraint firstItem="eD8-dG-8re" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jer-f2-hz8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLight" destination="eD8-dG-8re" id="qjx-UO-mO5"/>
+                        <outlet property="redLight" destination="Fu0-lv-7hn" id="d1G-Et-nnD"/>
+                        <outlet property="startButton" destination="WZ0-Kb-u1I" id="GeM-A2-9zO"/>
+                        <outlet property="yellowLight" destination="k2s-Hc-Dbz" id="rQV-xX-hup"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
